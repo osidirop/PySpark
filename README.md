@@ -46,3 +46,15 @@
 ### Partitioning in PySpark
 ![](RDD_partitioning.png)
 
+### RDD Transformations
+![](RDD_transformations.png)
+![](map_transformation.png)
+![](filter_transformation.png)
+![](flatMap_transformation.png)
+![](union_transformation.png)
+
+
+
+filter_transformation.png
+
+
