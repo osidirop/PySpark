@@ -11,9 +11,9 @@
 
 * Create a python list and load it into PySpark
   * numb = range(1, 100)
-  * spark_data = sc.parallelize(numb)
+  * spark_data = sc.parallelize(numb) => Creates an RDD
 * Load a local file into PySpark shell
-  * lines = sc.textFile("/usr/local/share/datasets/README.md")
+  * lines = sc.textFile("/usr/local/share/datasets/README.md") => Creates an RDD
   
 #### Lamda Functions (Anonymous Function)
 
@@ -40,3 +40,9 @@
   * returns [1,3]
   
 ### RDD: Resilient Distributed Datasets
+
+![](RDD.png)
+
+### Partitioning in PySpark
+![](RDD_partitioning.png)
+
