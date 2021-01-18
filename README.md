@@ -1,4 +1,4 @@
-# PySpark
+# PySpark Documentation
 
 
 ### A SparkContext represents the entry point to Spark functionality. It's like a key to your car. PySpark automatically creates a SparkContext for you in the PySpark shell (so you don't have to create it by yourself) and is exposed via a variable sc.
@@ -41,20 +41,84 @@
   
 ### RDD: Resilient Distributed Datasets
 
-![](RDD.png)
+![](images/RDD.png)
 
 ### Partitioning in PySpark
-![](RDD_partitioning.png)
+![](images/RDD_partitioning.png)
 
 ### RDD Transformations
-![](RDD_transformations.png)
-![](map_transformation.png)
-![](filter_transformation.png)
-![](flatMap_transformation.png)
-![](union_transformation.png)
+![](images/RDD_transformations.png)
+![](images/map_transformation.png)
+![](images/filter_transformation.png)
+![](images/flatMap_transformation.png)
+![](images/union_transformation.png)
 
 
+## RDD Simple Actions
+* Operation returns a value after running a computation on the RDD
+* Basic Actions:
+  * collect() -> returns all the elements of the dataset as an array
+  * take(N) -> returns an array with the fist N elemenents of the dataset
+    ![](images/collect_take.png)
+  * first() -> prints the first element of the RDD
+  * count() -> returns the number of elements in the RDD
 
-filter_transformation.png
 
+![](images/pair_RDD.png)
+![](images/pair_transformations.png)
+![](images/reduce_by_key.png)
+![](images/sort_by_key.png)
+![](images/group_by_key.png)
+![](images/join.png)
+
+## RDD Advanced Actions
+![](images/saveAsTextFile.png)
+![](images/actions_operations.png)
+![](images/countbyKey.png)
+![](images/collectAsMap.png)
+
+# Examples
+## CountingBykeys
+
+For many datasets, it is important to count the number of keys in a key/value dataset. For example, counting the number of countries where the product was sold or to show the most popular baby names. 
+
+![](images/ex1.png)
+
+## Create a base RDD and transform it
+
+The volume of unstructured data (log lines, images, binary files) in existence is growing dramatically, and PySpark is an excellent framework for analyzing this type of data through RDDs.
+
+![](images/ex2.png)
+
+## Remove stop words and reduce the dataset
+
+![](images/ex3.png)
+
+## Print word frequencies
+
+![](images/ex4.png)
+
+## PySpark DataFrames
+
+* PySpark SQL is a Spark library for structured data. It provides more information about the structure of data and computation. 
+* PySpark Dataframe is an immutable distributed collection of data with named columns. It is similar to a table in SQL.
+* Designed for processing both structured data (relational database) and semi-structured data (JSON: JavaScript Object Notation).
+* DataFrame API available in Python, R, Scala, and Java. 
+* DataFrames in PySpark support both SQL queries, for example (SELECT * from table) or expression method (df.select()) 
+
+## Spark Session 
+* SparkContext is the main entry point for creating RDDs
+* SparkSession provides a single point of entry to interact with Spark Dataframes
+  * It is used to create Dataframe, register Dataframes, execute SQL queries
+  * It is available in PySpark shell as <b>spark</b>
+  
+## Creating Dataframes in PySpark
+* Two different methods:
+  * From existind RDDs using SparkSession's createDataFrame() method
+  * From various data sources (csv,JSON,txt) using SparkSession's read method
+* Schema:
+  * controls the data and helps Dataframes to optimize queries
+  * provides information about column name, type of data in the column, empty values e.t.c.
+
+![](images/create_dataframe_from_RDD.png)
 
