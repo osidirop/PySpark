@@ -1,11 +1,13 @@
 # PySpark Documentation
 
 
-### A SparkContext represents the entry point to Spark functionality. It's like a key to your car. PySpark automatically creates a SparkContext for you in the PySpark shell (so you don't have to create it by yourself) and is exposed via a variable sc.
+### A SparkContext represents the entry point to Spark functionality. PySpark automatically creates a SparkContext for you in the PySpark shell (so you don't have to create it by yourself) and is exposed via a variable sc.
 
 * Print the version of SparkContext : print(sc.version)
 * Print the Python version of SparkContext: print(sc.pythonVer)
 * Print the master of SparkContext: print(sc.master)
+
+### The key idea of spark is Resilient Distributed Datasets (RDD); it supports in-memory processing computation. This means, it stores the state of memory as an object across the jobs and the object is sharable between those jobs. Data sharing in memory is 10 to 100 times faster than network and Disk. RDD stands for Resilient Distributed Dataset, these are the elements that run and operate on multiple nodes to do parallel processing on a cluster. RDDs are immutable elements, which means once you create an RDD you cannot change it.
 
 ### Interactive Use of PySpark: Spark comes with an interactive python shell in which PySpark is already installed in it. PySpark shell is useful for basic testing and debugging and it is quite powerful. 
 
@@ -121,4 +123,83 @@ The volume of unstructured data (log lines, images, binary files) in existence i
   * provides information about column name, type of data in the column, empty values e.t.c.
 
 ![](images/create_dataframe_from_RDD.png)
+![](images/create_df_from_file.png)
+![](images/df_operations.png)
+![](images/sql_queries.png)
+![](images/sql_q2.png)
+![](images/sql_q3.png)
+![](images/sql_q4.png)
+![](images/data_vis_in_spark.png)
+![](images/data_vis_hist.png)
+![](images/pandas_hist.png)
+![](images/HandySpark_hist.png)
+![](images/PySpark_MLlib.png)
+
+![](images/PySpark_MLlib_algorithms.png)
+![](images/PySpark_MLlib_pillars.png)
+![](images/PySpark_MLlib_imports.png)
+
+# Recommeder Systems
+![](images/RecommederSystems_ColabFilter.png)
+![](images/RecomSystem_Rating_Class.png)
+![](images/SplitRDD_train_test.png)
+![](images/train_withALS.png)
+![](images/predictAll_fromALS.png)
+![](images/model_evaluationusing_MSE.png)
+
+# Classification
+![](images/PySparkMLlib_Classification.png)
+![](images/logistic_reg.png)
+![](images/MLlib_vectors.png)
+![](images/LabelledPoint.png)
+## To compute a Time Frequency Vector
+![](images/HashingTF.png)
+![](images/LogReg_LBFGS.png)
+
+# Clustering (Unsupervised ML)
+![](images/clustering.png)
+![](images/kMeans.png)
+![](images/kmeans1.png)
+![](images/Kmeans_train.png)
+![](images/KMeans_evaluate.png)
+![](images/Visualizing_clusters.png)
+![](images/Kmeans_plot.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
